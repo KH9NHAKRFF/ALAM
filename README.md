@@ -8,7 +8,9 @@ This repository is the official implementation of https://openreview.net/forum?i
 
 ## Abstract
  One of the key challenges in deep neural network training is the substantial amount of GPU memory required to store activations obtained in the forward pass. Various Activation-Compressed Training (ACT) schemes have been proposed to mitigate this issue; however, it is challenging to adopt those approaches in recent transformer-based large language models (LLMs), which experience significant performance drops when the activations are deeply compressed during training. In this paper, we introduce ALAM, a novel ACT framework that utilizes average quantization and a lightweight sensitivity calculation scheme, enabling large memory saving in LLMs while maintaining training performance. We first demonstrate that compressing activations into their group average values minimizes the gradient variance. Employing this property, we propose Average Quantization which provides high-quality deeply compressed activations with an effective precision of less than 1 bit and improved flexibility of precision allocation. In addition, we present a cost-effective yet accurate sensitivity calculation algorithm that solely relies on the L2 norm of parameter gradients, substantially reducing memory overhead due to sensitivity calculation. In experiments, the ALAM framework significantly reduces activation memory without compromising accuracy, achieving up to a 12.5x compression rate in LLMs. 
-![alam_overview_github](https://github.com/KH9NHAKRFF/ALAM/assets/144604248/8b23e2d3-6578-4656-a8ef-054680fc73c8)
+<p align="center">
+  <img src="https://github.com/KH9NHAKRFF/ALAM/assets/144604248/8b23e2d3-6578-4656-a8ef-054680fc73c8">
+</p>
 
 ## Install
 
